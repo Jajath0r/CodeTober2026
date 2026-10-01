@@ -1,0 +1,1 @@
+{"total_rows": 35, "valid_rows": 19, "rejected_rows": 16, "duplicate_rows": 1, "rejection_reasons": {"transaction": 1, "timestamp": 2, "customer": 1, "country": 3, "amount": 5, "currency": 1, "status": 2, "duplicate": 1}}
