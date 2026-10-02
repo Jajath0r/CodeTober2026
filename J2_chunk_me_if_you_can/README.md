@@ -1,4 +1,4 @@
-# 🎃 CodeTober 2026 — Jour 2
+: # 🎃 CodeTober 2026 — Jour 2
 
 ## 📦 Chunk Me If You Can
 
