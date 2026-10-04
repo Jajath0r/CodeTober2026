@@ -1,0 +1,21 @@
+event_id,event_type,event_version,timestamp,customer_id,amount,currency,country,metadata
+EVT-0001,order_created,1,2026-10-02 08:14:22,CUST-1042,79.90,EUR,FR,"{""channel"":""web""}"
+EVT-0002,payment_received,1,2026-10-02 08:15:03,CUST-1042,79.90,EUR,FR,"{""provider"":""stripe""}"
+EVT-0003,order_created,2,2026-10-02 08:17:51,CUST-2041,42.50,EUR,DE,"{""channel"":""mobile"",""priority"":false}"
+EVT-0004,customer_updated,1,2026-10-02 08:20:12,CUST-3301,,,,"{""field"":""email""}"
+EVT-0005,payment_received,1,02/10/2026 08:21:44,CUST-2041,42.50,EUR,DE,"{""provider"":""paypal""}"
+EVT-0006,order_created,1,2026-10-02 08:25:10,CUST-5555,-12.00,EUR,FR,"{""channel"":""web""}"
+EVT-0007,payment_received,1,2026-10-02 08:27:31,CUST-6666,not-a-number,EUR,FR,"{""provider"":""stripe""}"
+EVT-0008,order_created,1,2026-10-02 08:28:02,CUST-7777,120.00,CHF,CH,"{""channel"":""store""}"
+EVT-0009,customer_updated,1,2026-10-02 08:30:18,,,,FR,"{""field"":""address""}"
+,customer_updated,1,2026-10-02 08:31:55,CUST-8888,,,,"{""field"":""phone""}"
+EVT-0011,unknown_event,1,2026-10-02 08:33:41,CUST-9999,,,,{}
+EVT-0012,order_created,1,2026-10-02 08:35:07,CUST-1001,35.00,EUR,FR,not-json
+EVT-0013,payment_received,2,2026-10-02 08:36:29,CUST-1002,35.00,EUR,FR,"{""provider"":""stripe"",""captured"":true}"
+EVT-0014,customer_updated,1,2026-10-02 08:38:00,CUST-1003,,,,{}
+EVT-0015,order_created,1,2026-10-02 08:40:11,CUST-1004,,EUR,FR,"{""channel"":""web""}"
+EVT-0016,payment_received,1,2026-10-02 08:42:26,CUST-1005,18.75,,FR,"{""provider"":""stripe""}"
+EVT-0017,order_created,1,2026-10-02 08:44:52,CUST-1006,55.00,EUR,GB,"{""channel"":""web""}"
+EVT-0018,payment_received,1,2026-10-02 08:46:15,CUST-1007,99.99,USD,US,"{""provider"":""stripe""}"
+EVT-0019,order_created,1,2026-10-02 08:48:33,CUST-1008,64.30,EUR,FR,"{""channel"":""mobile""}"
+EVT-0020,customer_updated,1,2026-10-02 08:50:02,CUST-1009,,,,"{""field"":""name""}"
