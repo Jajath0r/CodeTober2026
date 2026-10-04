@@ -1,0 +1,9 @@
+customer_id,name,country,segment
+CUST-1001,Alice Martin,FR,B2C
+CUST-1002,Bruno Keller,DE,B2B
+CUST-1003,Chloé Bernard,FR,B2C
+CUST-1004,David Smith,GB,B2B
+CUST-1005,Emma Rossi,IT,B2C
+CUST-1006,Farid Benali,FR,B2B
+CUST-1007,Greta Müller,DE,B2C
+CUST-1008,Hugo Dubois,FR,B2C
