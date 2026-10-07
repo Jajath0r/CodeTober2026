@@ -1,0 +1,34 @@
+nb_read_lines = 0
+nb_invalid_lines = 0
+nb_processed_lines = 0
+nb_skipped_lines = 0
+
+fichier_entree = input_csv
+output_csv = path.join(output_csv,"output.csv")
+output_json = path.join(output_csv,"report.json")
+
+si output_json existe:
+    data = output_json.data
+    watermark_before = data["watermark_after"]
+    watermark_after = watermark_before
+sinon:
+    watermark_before = None
+    watermark_after = datetime.min
+
+
+Pour chaque ligne de fichier_entree:
+    nb_read_lines ++
+    si ligne valide:
+        si watermark_before est None ou ligne.timestamp > watermark_before:
+            nb_processed_lines ++
+            ajouter la ligne a output_csv
+            si ligne.timestamp > watermark_after:
+                watermark_after = ligne.timestamp
+        sinon:
+            nb_skipped_lines ++
+    sinon:
+        nb_invalid_lines ++
+
+Si watermark_after == datetime.min:
+    watermark_after = None
+écrire {nb_read_lines, nb_invalid_lines, nb_processed_lines, nb_skipped_lines,watermark_before,watermark_after} dans output_json

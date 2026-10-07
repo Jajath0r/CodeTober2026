@@ -1,0 +1,4 @@
+event_id,event_timestamp,customer_id,event_type,amount,source
+EVT-B,2026-10-01 10:05:00,C2,ORDER_CREATED,20.00,mobile
+EVT-D,2026-10-01 10:08:00,C4,ORDER_UPDATED,40.00,web
+EVT-E,2026-10-01 10:06:00,C5,ORDER_CREATED,50.00,partner
