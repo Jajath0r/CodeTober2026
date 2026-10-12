@@ -153,7 +153,14 @@ def main():
         replace(new_output_csv,output_csv)
         if watermark_after == datetime.min:
             watermark_after = None
-        report_data = {"nb_read_lines":nb_read_lines,"nb_skipped_lines":nb_skipped_lines,"nb_processed_lines":nb_processed_lines,"nb_invalid_lines":nb_invalid_lines,"watermark_before":watermark_to_json(watermark_before),"watermark_after":watermark_to_json(watermark_after)}
+        report_data = {
+            "nb_read_lines":nb_read_lines,
+            "nb_skipped_lines":nb_skipped_lines,
+            "nb_processed_lines":nb_processed_lines,
+            "nb_invalid_lines":nb_invalid_lines,
+            "watermark_before":watermark_to_json(watermark_before),
+            "watermark_after":watermark_to_json(watermark_after)
+        }
         new_output_json = path.join(output_rep,"new_" + json_name)
         with open(new_output_json,"w") as report:
             json.dump(report_data,report)

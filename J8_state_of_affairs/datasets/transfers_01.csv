@@ -1,0 +1,7 @@
+transfer_id,source_account,destination_account,amount_cents
+T001,A,B,2500
+T002,D,C,900
+T003,B,D,1300
+T004,C,A,1200
+T005,D,A,2000
+T006,A,D,500
