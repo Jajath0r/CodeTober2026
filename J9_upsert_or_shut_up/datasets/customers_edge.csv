@@ -1,0 +1,9 @@
+customer_id,full_name,email,country,updated_at
+C010,Jules Vidal,jules@example.fr,FR,2026-10-04T09:00:00
+C010,Jules Vidal,jules.new@example.fr,FR,2026-10-04T10:00:00
+C002,Benoit Leroy,benoit.conflict@example.fr,FR,2026-10-02T08:00:00
+,No ID,noid@example.fr,FR,2026-10-04T10:00:00
+C011,Katia Blanc,katia@example.fr,FR,not-a-date
+C012,Leo Faure,leo@example.fr,FR,2026-10-04T10:30:00
+C012,Leo Faure,leo@example.fr,FR,2026-10-04T10:30:00
+C013,Maya Renard,,FR,2026-10-04T11:00:00

@@ -1,0 +1,7 @@
+customer_id,full_name,email,country,updated_at
+C002,Benoit Leroy,benoit.new@example.fr,FR,2026-10-02T08:00:00
+C003,Clara Petit,clara@example.fr,BE,2026-10-01T09:10:00
+C006,Farid Diallo,farid@example.fr,FR,2026-10-02T08:10:00
+C001,Alice Martin,old-alice@example.fr,FR,2026-09-30T08:00:00
+C005,Emma Laurent,emma@example.fr,DE,2026-10-02T08:20:00
+C007,Gaelle Roche,gaelle@example.fr,FR,2026-10-02T08:25:00

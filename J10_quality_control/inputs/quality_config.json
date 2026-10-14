@@ -1,0 +1,15 @@
+{
+  "accepted_currencies": [
+    "EUR"
+  ],
+  "max_invalid_ratio": 0.15,
+  "required_columns": [
+    "batch_id",
+    "order_id",
+    "customer_id",
+    "order_date",
+    "quantity",
+    "unit_price_cents",
+    "currency"
+  ]
+}
