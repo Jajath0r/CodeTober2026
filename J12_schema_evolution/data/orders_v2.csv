@@ -1,0 +1,17 @@
+order_id,order_date,product_id,units,status,sales_channel
+ORD-001,2026-10-01,P-101,2,paid,web
+ORD-002,2026-10-01,P-103,1,paid,app
+ORD-003,2026-10-02,P-102,3,cancelled,store
+ORD-004,2026-10-02,P-104,4,paid,web
+ORD-005,2026-10-03,P-102,2,paid,app
+ORD-006,2026-10-03,P-101,1,pending,store
+ORD-007,2026-10-04,P-103,5,paid,web
+ORD-008,2026-10-04,P-104,1,cancelled,app
+ORD-009,2026-10-05,P-101,3,paid,store
+ORD-010,2026-10-05,P-102,1,paid,web
+ORD-011,2026-10-06,P-104,2,paid,app
+ORD-012,2026-10-06,P-103,2,pending,store
+ORD-013,2026-10-07,P-102,4,paid,web
+ORD-014,2026-10-07,P-101,1,paid,app
+ORD-015,2026-10-08,P-104,3,paid,store
+ORD-016,2026-10-08,P-103,2,paid,web
