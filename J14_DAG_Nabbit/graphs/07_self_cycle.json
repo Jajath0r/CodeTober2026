@@ -1,0 +1,14 @@
+{
+  "tasks": [
+    {
+      "name": "extract_catalog",
+      "depends_on": [
+        "extract_catalog"
+      ]
+    },
+    {
+      "name": "extract_orders",
+      "depends_on": []
+    }
+  ]
+}

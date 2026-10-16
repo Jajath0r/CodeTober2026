@@ -1,0 +1,26 @@
+{
+  "tasks": [
+    {
+      "name": "extract_catalog",
+      "depends_on": []
+    },
+    {
+      "name": "extract_orders",
+      "depends_on": []
+    },
+    {
+      "name": "transform_sales",
+      "depends_on": [
+        "extract_catalog",
+        "extract_orders"
+      ]
+    },
+    {
+      "name": "load_sales",
+      "depends_on": [
+        "transform_sales",
+        "missing_task"
+      ]
+    }
+  ]
+}
