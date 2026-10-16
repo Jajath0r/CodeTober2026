@@ -1,0 +1,8 @@
+{
+  "products": [
+    {"product_id":"P-101","name":"Notebook","unit_price_cents":850},
+    {"product_id":"P-102","name":"Desk lamp","unit_price_cents":2200},
+    {"product_id":"P-103","name":"Mug","unit_price_cents":1250},
+    {"product_id":"P-104","name":"Keyboard","unit_price_cents":3900}
+  ]
+}
