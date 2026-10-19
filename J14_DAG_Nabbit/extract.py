@@ -28,3 +28,8 @@ def fetch_catalog(source : SimulatedCatalogSource, sleep_func = time.sleep) -> d
             delay = min(delay + 0.5, 1)
         else:
             return catalog_data
+
+def get_dependency_graph(graph_name : str) -> dict[str,list[str]]:
+    with open(graph_name,'r') as graph:
+        graph_data = json.load(graph)
+    return {task["name"] : task['depends_on'] for task in graph_data['tasks']}
