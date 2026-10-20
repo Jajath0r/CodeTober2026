@@ -1,0 +1,56 @@
+{
+  "providers": [
+    {
+      "provider_id": "alpha",
+      "delay_seconds": 0.01,
+      "fail": false,
+      "products": [
+        {
+          "sku": "A01",
+          "name": "Keyboard",
+          "price_cents": 3900
+        },
+        {
+          "sku": "A02",
+          "name": "Mouse",
+          "price_cents": 2400
+        }
+      ]
+    },
+    {
+      "provider_id": "beta",
+      "delay_seconds": 0.01,
+      "fail": false,
+      "products": [
+        {
+          "sku": "B01",
+          "name": "Monitor",
+          "price_cents": 15900
+        }
+      ]
+    },
+    {
+      "provider_id": "gamma",
+      "delay_seconds": 0.01,
+      "fail": false,
+      "products": []
+    },
+    {
+      "provider_id": "delta",
+      "delay_seconds": 0.01,
+      "fail": false,
+      "products": [
+        {
+          "sku": "D01",
+          "name": "Dock",
+          "price_cents": 8900
+        },
+        {
+          "sku": "D02",
+          "name": "Cable",
+          "price_cents": 990
+        }
+      ]
+    }
+  ]
+}
