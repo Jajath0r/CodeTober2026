@@ -1,4 +1,4 @@
-from simulator import SupplierSimulator, ProviderError
+from simulator import SupplierSimulator
 from concurrent.futures import ThreadPoolExecutor
 from models import ProviderResult
 
@@ -24,3 +24,4 @@ def extract_all_providers(source : SupplierSimulator,limit : int) -> dict[str,Pr
             # finally:
             #     print(f"Provider {provider} extracted !")
     return provider_dict
+

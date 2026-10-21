@@ -1,0 +1,7 @@
+order_id,order_date,product_id,quantity,status
+O0001,2026-10-20,P001,2,paid
+O0002,2026-10-20,P002,3,paid
+O0003,2026-10-20,P003,1,paid
+O0004,2026-10-20,P004,oops,paid
+O0005,2026-10-20,P001,3,paid
+O0006,2026-10-20,P002,1,paid
