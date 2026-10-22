@@ -1,0 +1,6 @@
+product_id,name,unit_price_cents,mean_price_cents,difference_to_mean_cents
+P001,Clavier,4700,5840.0,-1140.0
+P002,Souris ergonomique,1800,5840.0,-4040.0
+P003,Ecran,18900,5840.0,13060.0
+P004,Cable USB,900,5840.0,-4940.0
+P005,Support ordinateur,2900,5840.0,-2940.0
