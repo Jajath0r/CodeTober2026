@@ -1,0 +1,10 @@
+product_id,name,unit_price_cents,valid_from,valid_to
+P001,Clavier,4500,2026-10-01,2026-10-08
+P001,Clavier,4900,2026-10-08,2026-10-20
+P001,Clavier,4700,2026-10-20,
+P002,Souris,1800,2026-10-01,2026-10-15
+P002,Souris ergonomique,1800,2026-10-15,
+P003,Ecran,19900,2026-10-01,2026-10-20
+P003,Ecran,18900,2026-10-20,
+P004,Cable USB,900,2026-10-01,
+P005,Support ordinateur,2900,2026-10-15,

@@ -1,0 +1,7 @@
+scenario,source,effect_date,expected_status,expected_extracted_products,expected_committed_inserts,expected_committed_closures,expected_total_versions
+1,catalog_2026-10-01.json,2026-10-01,SUCCESS,4,4,0,4
+2,catalog_2026-10-08.json,2026-10-08,SUCCESS,4,1,1,5
+3,catalog_2026-10-15.json,2026-10-15,SUCCESS,5,2,1,7
+4,catalog_2026-10-20_bad_price.json,2026-10-20,FAILED,5,0,0,7
+5,catalog_2026-10-20.json,2026-10-20,SUCCESS,5,2,2,9
+6,catalog_2026-10-20.json,2026-10-20,SUCCESS,5,0,0,9

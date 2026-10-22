@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "product_id": "P001",
+      "name": "Clavier",
+      "unit_price_cents": 4500
+    },
+    {
+      "product_id": "P002",
+      "name": "Souris",
+      "unit_price_cents": 1800
+    },
+    {
+      "product_id": "P003",
+      "name": "Ecran",
+      "unit_price_cents": 19900
+    },
+    {
+      "product_id": "P004",
+      "name": "Cable USB",
+      "unit_price_cents": 900
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "product_id": "P001",
+      "name": "Clavier",
+      "unit_price_cents": 4700
+    },
+    {
+      "product_id": "P002",
+      "name": "Souris ergonomique",
+      "unit_price_cents": 1800
+    },
+    {
+      "product_id": "P003",
+      "name": "Ecran",
+      "unit_price_cents": "NOT_A_PRICE"
+    },
+    {
+      "product_id": "P004",
+      "name": "Cable USB",
+      "unit_price_cents": 900
+    },
+    {
+      "product_id": "P005",
+      "name": "Support ordinateur",
+      "unit_price_cents": 2900
+    }
+  ]
+}
