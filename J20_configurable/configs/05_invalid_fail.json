@@ -1,0 +1,11 @@
+{
+  "source": {
+    "path": "../data/catalog_2026-10-20_invalid.json"
+  },
+  "destination": {
+    "sqlite_path": "../output/main/catalog.db"
+  },
+  "behavior": {
+    "invalid_product": "fail"
+  }
+}

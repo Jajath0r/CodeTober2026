@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "product_id": "P101",
+      "name": "Clavier USB",
+      "unit_price_cents": 4500
+    },
+    {
+      "product_id": "P102",
+      "name": "Souris filaire",
+      "unit_price_cents": 1800
+    },
+    {
+      "product_id": "P103",
+      "name": "Écran 24 pouces",
+      "unit_price_cents": 18900
+    }
+  ]
+}

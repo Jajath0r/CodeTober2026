@@ -1,0 +1,11 @@
+{
+  "source": {
+    "path": "../data/catalog_2026-10-01.json"
+  },
+  "destination": {
+    "sqlite_path": "../output/secondary/catalog.db"
+  },
+  "behavior": {
+    "invalid_product": "fail"
+  }
+}

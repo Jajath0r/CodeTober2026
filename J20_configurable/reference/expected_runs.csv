@@ -1,0 +1,9 @@
+config,expected_status,processed_valid,inserted_committed,catalog_versions_after,notes
+01_initial.json,SUCCESS,3,3,3,initial
+02_update.json,SUCCESS,4,2,5,update plus new product
+03_rename.json,SUCCESS,4,2,7,rename plus price decrease
+04_replay.json,SUCCESS,4,0,7,idempotent
+05_invalid_fail.json,FAILED,2,0,7,rollback after 2 products; third invalid
+06_invalid_skip.json,SUCCESS,4,2,9,one skipped; update P101 and new P105
+08_valid_followup.json,SUCCESS,5,0,9,same valid end state
+07_isolated.json,SUCCESS,3,3,3,separate database
