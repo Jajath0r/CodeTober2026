@@ -1,32 +1,22 @@
 import argparse
 from sqlite3 import connect,Row
-from os import path,makedirs
-from extract import get_catalog
+from os import makedirs, path
+from extract import get_catalog, get_configuration_data, get_source_file, get_destination_file, get_invalid_product_behavior
 from load import create_catalog_table, insert_product_in_catalog,create_logging_table, insert_logging
+from models import InvalidProductBehavior,InvalidProductError
 from time import perf_counter
 import datetime
+from datetime import date
 import sys
 
 def parse_input():
     parser = argparse.ArgumentParser(
-        description="Slowly but surely"
-    )
-    
-    parser.add_argument(
-        "input_rep",
-        type=str,
-        help="catalog repository path"
-    )
-    
-    parser.add_argument(
-        "input_file",
-        type=str,
-        help="catalog filename"
+        description="Configurable"
     )
     parser.add_argument(
-        "output_rep",
+        "input_json",
         type=str,
-        help="output repository"
+        help="configuration file path"
     )
     
     return parser.parse_args()
@@ -35,30 +25,43 @@ def parse_input():
 def main():
     args = parse_input()
     start = perf_counter()
-    output_rep = args.output_rep
-    if not path.exists(output_rep):
-        makedirs(output_rep)
-    db_path = path.join(output_rep,"catalog.db")
-    connection = connect(db_path)
+    input_json = args.input_json
+    config_path = path.abspath(input_json)
+    config_dir = path.dirname(config_path)
+    configuration_dict = get_configuration_data(input_json)
+    source_path = get_source_file(config_dir, configuration_dict)
+    catalog = path.basename(source_path)
+    catalog_date = catalog.removeprefix("catalog_")[:10]
+    catalog_date = date.fromisoformat(catalog_date).isoformat()
+    destination_path = get_destination_file(config_dir, configuration_dict)
+    invalid_behavior = get_invalid_product_behavior(configuration_dict)
+    if not path.isfile(source_path):
+        raise ValueError(f"Source {source_path} does not exist")
+    if not path.exists(path.dirname(destination_path)):
+        makedirs(path.dirname(destination_path))
+    connection = connect(destination_path)
     connection.row_factory = Row
-    input_rep = args.input_rep
-    catalog = args.input_file
-    catalog_date = catalog[8:18]
-    catalog_path = path.join(input_rep, catalog)
     nb_processed_lines = 0
     nb_inserted_lines = 0
     start_time = datetime.datetime.now()
     exec_id = catalog.removesuffix(".json") + "_" + str(start_time.timestamp())
     steps = []
     try:
-        catalog_dict = get_catalog(catalog_path)
+        catalog_dict = get_catalog(source_path)
         steps.append("EXTRACT")
         create_catalog_table(connection)
         steps.append("INIT_DB")
         for product_id, product in catalog_dict.items():
             row = {"product_id": product_id, **product}
-            nb_inserted_lines += insert_product_in_catalog(connection, row, catalog_date)
+            inserted_lines = 0
             nb_processed_lines += 1
+            try:
+                inserted_lines += insert_product_in_catalog(connection, row, catalog_date)
+            except InvalidProductError:
+                if invalid_behavior == InvalidProductBehavior.SKIP:
+                    continue
+                raise
+            nb_inserted_lines += inserted_lines
         steps.append("LOAD")
         connection.commit()
         steps.append("COMMIT")
@@ -73,11 +76,11 @@ def main():
         status = "SUCCESS"
     finally:
         connection.close()
-        connection = connect(db_path)
+        connection = connect(destination_path)
         connection.row_factory = Row
         try:
             create_logging_table(connection)
-            insert_logging(connection,exec_id,catalog_path, catalog_date, status, error_type, ", ".join(steps),nb_processed_lines, nb_inserted_lines, start)
+            insert_logging(connection,exec_id,source_path, catalog_date, status, error_type, ", ".join(steps),nb_processed_lines, nb_inserted_lines, start)
             connection.commit()
         except Exception as e:
             connection.rollback()

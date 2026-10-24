@@ -1,6 +1,7 @@
 from sqlite3 import Connection
 from datetime import date
 from time import perf_counter
+from models import InvalidProductError
 
 def create_catalog_table(connection : Connection) -> None:
     connection.execute(
@@ -31,7 +32,10 @@ def insert_logging(
 def insert_product_in_catalog(connection : Connection, row : dict[str,str], current_date : str) -> int:
     product_id = row["product_id"]
     name = row["name"]
-    price = int(row["unit_price_cents"])
+    try:
+        price = int(row["unit_price_cents"])
+    except (ValueError, TypeError) as e:
+        raise InvalidProductError("Invalid product price") from e
     snapshot_date = date.fromisoformat(current_date)
     latest_product = connection.execute(
         "SELECT * FROM catalog where product_id = ? and valid_to is NULL",
