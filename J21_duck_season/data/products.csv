@@ -1,0 +1,11 @@
+product_id,product_name,category,unit_price_cents
+P001,Clavier compact,Peripheriques,3900
+P002,Souris sans fil,Peripheriques,2400
+P003,Ecran 24 pouces,Ecrans,14900
+P004,Ecran 27 pouces,Ecrans,22900
+P005,Support portable,Accessoires,3200
+P006,Hub USB-C,Accessoires,5700
+P007,Webcam HD,Peripheriques,6900
+P008,Cable HDMI,Accessoires,1200
+P009,Casque audio,Audio,8400
+P010,Micro USB,Audio,9900
