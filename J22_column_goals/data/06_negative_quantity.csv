@@ -1,0 +1,4 @@
+transaction_id,order_date,country,product_id,status,quantity,unit_price_cents
+T001,2026-09-12,FR,P001,completed,2,1500
+T002,2026-10-03,DE,P002,completed,-2,2999
+T003,2026-10-07,BE,P003,pending,3,750
