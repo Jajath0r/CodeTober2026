@@ -1,0 +1,95 @@
+{
+  "run_id": "run_001",
+  "status": "SUCCESS",
+  "tasks": {
+    "import_orders": {
+      "status": "SUCCESS",
+      "attempts": 1,
+      "metrics": {
+        "rows": 6
+      },
+      "history": [
+        {
+          "attempt": 1,
+          "status": "SUCCESS",
+          "timestamp": "2026-10-29T19:43:17.182282"
+        }
+      ]
+    },
+    "import_products": {
+      "status": "SUCCESS",
+      "attempts": 1,
+      "metrics": {
+        "rows": 3
+      },
+      "history": [
+        {
+          "attempt": 1,
+          "status": "SUCCESS",
+          "timestamp": "2026-10-29T19:43:17.199837"
+        }
+      ]
+    },
+    "check_orders": {
+      "status": "SUCCESS",
+      "attempts": 1,
+      "metrics": {
+        "rows": 6
+      },
+      "history": [
+        {
+          "attempt": 1,
+          "status": "SUCCESS",
+          "timestamp": "2026-10-29T19:43:17.215328"
+        }
+      ]
+    },
+    "check_products": {
+      "status": "SUCCESS",
+      "attempts": 1,
+      "metrics": {
+        "rows": 3
+      },
+      "history": [
+        {
+          "attempt": 1,
+          "status": "SUCCESS",
+          "timestamp": "2026-10-29T19:43:17.235690"
+        }
+      ]
+    },
+    "aggregate": {
+      "status": "SUCCESS",
+      "attempts": 2,
+      "metrics": {
+        "categories": 2
+      },
+      "history": [
+        {
+          "attempt": 1,
+          "status": "FAILED",
+          "timestamp": "2026-10-29T19:43:17.253415"
+        },
+        {
+          "attempt": 2,
+          "status": "SUCCESS",
+          "timestamp": "2026-10-29T19:43:17.274089"
+        }
+      ]
+    },
+    "publish": {
+      "status": "SUCCESS",
+      "attempts": 1,
+      "metrics": {
+        "published": "C:\\Users\\b_adidier\\OneDrive - Vetoquinol\\Documents\\perso\\CodeTober_2026\\J23_orchestrate_this\\output_test_transient\\sales_by_category.csv"
+      },
+      "history": [
+        {
+          "attempt": 1,
+          "status": "SUCCESS",
+          "timestamp": "2026-10-29T19:43:17.297873"
+        }
+      ]
+    }
+  }
+}

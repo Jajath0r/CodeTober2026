@@ -1,0 +1,14 @@
+[
+  {
+    "category": "books",
+    "items": 8,
+    "orders": 3,
+    "revenue_cents": 5400
+  },
+  {
+    "category": "electronics",
+    "items": 1,
+    "orders": 1,
+    "revenue_cents": 3500
+  }
+]

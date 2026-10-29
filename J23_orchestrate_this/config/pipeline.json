@@ -1,0 +1,11 @@
+{
+  "pipeline": "daily_sales",
+  "tasks": [
+    {"id": "import_orders", "depends_on": [], "max_attempts": 2},
+    {"id": "import_products", "depends_on": [], "max_attempts": 2},
+    {"id": "check_orders", "depends_on": ["import_orders"], "max_attempts": 1},
+    {"id": "check_products", "depends_on": ["import_products"], "max_attempts": 1},
+    {"id": "aggregate", "depends_on": ["check_orders", "check_products"], "max_attempts": 3},
+    {"id": "publish", "depends_on": ["aggregate"], "max_attempts": 2}
+  ]
+}
